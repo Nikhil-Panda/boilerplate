@@ -1,0 +1,13 @@
+extends ../index.pug
+
+block variables
+  - var template = 'about'
+
+block content
+  .about
+    .about_wrapper
+      section.about_gallery
+        .about_gallery_wrapper
+          each media in about.data.gallery
+            figure.about_gallery_media
+              img.about_gallery_media_image(alt=media.image.alt src=media.image.url)
